@@ -2,11 +2,28 @@
 
 add_action('wp_enqueue_scripts', 'add_styles');
 
-function add_styles()
-{
+register_nav_menus(array(
+    "global" => "グローバルメニュー"
+));
+
+function add_styles() {
+
+    //フォントの読み込み
+    wp_enqueue_style(
+        'google-fonts',
+        'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap',
+        array(),
+        null
+    );
+
+    wp_enqueue_style(
+        'theme-style',
+        get_stylesheet_uri(),
+        array('google-fonts'),
+        filemtime(get_stylesheet_directory() . '/style.css')
+    );
 
     //CSSの読み込み
-
     // reset styleを登録
     wp_register_style(
         'reset_style',

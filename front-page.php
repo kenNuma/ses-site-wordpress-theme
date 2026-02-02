@@ -1,10 +1,10 @@
 <?php
 get_header();
 ?>
-<main>
+<!-- <main>
     <h1>テーマ有効化テスト</h1>
     <p>ここが表示されればOK。</p>
     <p>front-page</p>
-</main>
+</main> -->
 <?php
 get_footer();
