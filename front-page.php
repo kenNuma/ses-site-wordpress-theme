@@ -1,0 +1,10 @@
+<?php
+get_header();
+?>
+<main>
+    <h1>テーマ有効化テスト</h1>
+    <p>ここが表示されればOK。</p>
+    <p>front-page</p>
+</main>
+<?php
+get_footer();
