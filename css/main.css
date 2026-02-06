@@ -101,9 +101,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.15s ease;
 }
 .cta-btn:hover {
     filter: brightness(110%);
+}
+.cta-btn:active {
+    transform: scale(0.96);    
 }
 
 /* - TOP ~ FV ~ - */
@@ -119,7 +123,7 @@ body {
 .fv-inner {
     align-items: center;
     margin-left: 10%;
-    transform: translateY(40%);
+    padding-top: 15vh;
 }
 .fv-inner a {
     font-size: clamp(16px, 2.5vw, 32px);
