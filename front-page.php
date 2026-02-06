@@ -11,6 +11,9 @@ get_header();
             <a class="fv-cta cta-btn"href="">お問い合わせ</a>
         </div>
     </section>
+    <section class="overview container">
+        <h2 class="section-title">事業概要</h2>
+    </section>
 </main>
 <?php
 get_footer();

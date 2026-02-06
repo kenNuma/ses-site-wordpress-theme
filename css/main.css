@@ -15,6 +15,7 @@ img {
 body {
     font-family: "Noto Sans JP", "Inter", sans-serif;
     font-size: 16px;
+    background-color: #FAF7F2;
 }
 
 /* - header - */
@@ -66,6 +67,7 @@ body {
     transform: translateX(-50%);
     transition: all 0.25s;
 }
+
 /* ★ここが本題：currentだけアニメ無効 */
 .global-nav .current_page_item > a {
     opacity: 1;
@@ -88,11 +90,17 @@ body {
     padding: 8px 0;
 }
 
+/* 共通のクラス関連 */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
 /* text-shadow */
 .shadow {
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
-/* cta-btn */ 
+/* お問い合わせ系ボタン */ 
 .cta-btn {
     color: white;
     background-color: #FFB300;
@@ -108,6 +116,13 @@ body {
 }
 .cta-btn:active {
     transform: scale(0.96);    
+}
+.section-title {
+    font-size: 64px;
+    font-weight: 400;
+    border-bottom: solid 4px #2E7D32;
+    text-align: center;
+    display: inline-block;
 }
 
 /* - TOP ~ FV ~ - */
@@ -141,4 +156,10 @@ body {
     font-weight: 300;
     padding-left: 88px;
     letter-spacing: 0.02em;
+}
+
+/* - TOP ~ overview ~ - */
+.overview {
+    margin-top: 100px;
+    text-align: center;
 }
