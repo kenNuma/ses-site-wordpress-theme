@@ -46,11 +46,11 @@ body {
     color: inherit;
     position: relative;
 }
-.global-nav a:hover {
+.global-nav li:not(.current_page_item) > a:hover {
     opacity: 0.7;
 }
 
-.global-nav a:hover::after {
+.global-nav li:not(.current_page_item) > a:hover::after {
     opacity: 1;
     bottom: 4px;
 }
@@ -69,10 +69,8 @@ body {
 }
 
 /* ★ここが本題：currentだけアニメ無効 */
-.global-nav .current_page_item > a {
-    opacity: 1;
-}
 .global-nav .current_page_item > a::after {
+    opacity: 1;
     bottom: 4px;
     height: 3px;          /* 太くしたいなら */
     transition: none;
@@ -93,7 +91,7 @@ body {
 /* 共通のクラス関連 */
 
 .container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 /* text-shadow */
@@ -129,11 +127,18 @@ body {
 .fv {
     background-image: url(../img/fv.png);
     background-size: cover;
-    margin-top: 80px;
-    height: calc(100vh - 80px);
+    margin-top: 72px;
+    height: calc(100vh - 72px);
     display: flex;
     align-items: flex-start;
     color: white;
+    position: relative;
+}
+.fv::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.12);
 }
 .fv-inner {
     align-items: center;
@@ -161,5 +166,65 @@ body {
 /* - TOP ~ overview ~ - */
 .overview {
     margin-top: 100px;
+    margin-bottom: 100px;
     text-align: center;
 }
+.overview-contents {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+.ov-content {
+    background-color: #fff;
+    padding: 0 8px;
+    width: 49%;
+    height: 411px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+.ov-content-svg {
+    background-color: #D9D9D9;
+    margin: 90px 16px;
+    border-radius: 50%;
+    width: 40%;
+    position: relative;
+}
+.ov-svg {
+    width: 100px;
+    position: absolute;
+}
+.settings { 
+    top: 15%;
+    left: 10%;
+}
+.person { 
+    top: 42%;
+    left: 42%;
+}
+.check { 
+    top: 15%;
+    left: 8%;
+}
+.folder { 
+    top: 45%;
+    left: 45%;
+}
+.ov-content-text {
+    text-align: left;
+    font-family: "Inter";
+    padding: 32px 16px;
+    width: 60%;
+}
+.ov-content-text h3 {
+    font-size: 2.25rem;
+    font-weight: 400;
+}
+.ov-content-text p {
+    font-weight: 300;
+    padding-top: 40px;
+    font-size: 1.65rem;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+}
+
