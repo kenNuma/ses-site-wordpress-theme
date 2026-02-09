@@ -3,15 +3,15 @@ a {
     text-decoration: None;
     color: #333;
 }
-
+ul {
+    list-style: none;
+}
 li {
     list-style: none;
 }
-
 img {
     width: 100%;
 }
-
 body {
     font-family: "Noto Sans JP", "Inter", sans-serif;
     font-size: 16px;
@@ -228,3 +228,58 @@ body {
     line-height: 1.4;
 }
 
+/* - TOP ~ strengths ~ - */
+.strengths {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+.strengths-bg {
+    margin-top: 100px;
+    background-image: url(../img/strengths-bg.png);
+    background-size: cover;
+}
+.strengths-contents {
+    padding: 80px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.strengths-contents li {
+    font-weight: 300;
+    padding: 68px 32px 0 32px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 12px;
+    width: 32%;
+    height: 440px;
+    position: relative;
+}
+.strengths-contents li h3 {
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 1.1;
+}
+.strengths-contents li p {
+    font-size: 2rem;
+    margin-top: 64px;
+    text-align: left;
+}
+.strengths-contents li::before {
+    content: "";
+    width: 100%;
+    height: 16px;
+    background-color: #2E7D32;
+    opacity: 0.15;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+.strengths-contents li::after {
+    font-family: "Jaini";
+    font-size: 3rem;
+    content: attr(data-num);
+    color: #2E7D32;
+    top: 10px;
+    left: 16px;
+    position: absolute;
+}

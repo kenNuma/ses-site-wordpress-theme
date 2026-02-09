@@ -36,6 +36,27 @@ get_header();
             </div>
         </div>
     </section>
+    <section class="strengths">
+        <h2 class="section-title">強み</h2>
+        <div class="strengths-bg">
+            <div class="container">
+                <ul class="strengths-contents">
+                    <li data-num="01">
+                        <h3>スキルマッチ<br>精度の高さ</h3>
+                        <p>技術スキルだけでなく、業務内容やチーム特性を踏まえた人材を提案します。</p>
+                    </li>
+                    <li data-num="02">
+                        <h3>スピーディーな<br>対応力</h3>
+                        <p>最短即日での人材提案など、急な要件変更にも柔軟に対応します。</p>
+                    </li>
+                    <li data-num="03">
+                        <h3>エンジニア<br>フォロー体制</h3>
+                        <p>定期的なフォローにより、安定した稼働と長期的な関係を実現します。</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </main>
 <?php
 get_footer();

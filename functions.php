@@ -11,7 +11,8 @@ function add_styles() {
     //フォントの読み込み
     wp_enqueue_style(
         'google-fonts',
-        'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap',
+        // 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap',
+        'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Jaini&display=swap',
         array(),
         null
     );
