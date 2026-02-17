@@ -107,6 +107,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 2;
+    position: relative;
     transition: transform 0.15s ease;
 }
 .cta-btn:hover {
@@ -133,12 +135,14 @@ body {
     align-items: flex-start;
     color: white;
     position: relative;
+    z-index: 0;
 }
 .fv::after {
     content: "";
     position: absolute;
     inset: 0;
     background-color: rgba(255, 255, 255, 0.12);
+    z-index: 1;
 }
 .fv-inner {
     align-items: center;
@@ -237,7 +241,8 @@ body {
 .strengths-bg {
     margin-top: 100px;
     background-image: url(../img/strengths-bg.png);
-    background-size: cover;
+    background-size: 100% 100%;
+    filter: saturate(0.85) brightness(0.95);
 }
 .strengths-contents {
     padding: 80px 0;
@@ -283,3 +288,87 @@ body {
     left: 16px;
     position: absolute;
 }
+
+/* - TOP ~ technology ~ - */
+
+.technology {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+.technology-contents {
+    margin: 100px 0;
+    text-align: left;
+}
+.techno-item h3 {
+    padding-left: calc(80px + 19px); /*擬似要素の分*/
+    font-size: 3rem;
+    color: #111;
+    font-weight: 400;
+    position: relative;
+}
+.techno-item h3::before {
+    content: "";
+    width: 19px;
+    background-color: #2E7D32;
+    border-radius: 4px;
+    height: 70%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.techno-item h4 {
+    margin-top: 24px;
+    font-size: 2.75rem;
+    color: #666;
+    font-weight: 400;
+}
+.techno-item > p {
+    margin: 8px 0 0 80px;
+    font-size: 2.375rem;
+}
+.front {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 24px 0 40px 0;
+    margin-bottom: 80px;
+}
+.scroll {
+    margin-top: 24px;
+    /* display: flex; */
+    /* gap: 16px; */
+    overflow: hidden;
+}
+.scroll-item {
+    /* transform: translateX(-40px); */
+    box-sizing: border-box;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 280px;
+    padding: 16px 16px;
+    border-radius: 16px;
+    border: solid 1px #E5E1DA;
+    background-color: #F7F7F7;
+    overflow: hidden;
+    filter: drop-shadow(3px 3px 4px rgba(0,0,0,0.1))
+}
+.swiper-slide {
+    width: 300px;
+}
+.scroll-item p {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-size: 3rem;
+    color: #333;
+    width: 65%;
+    text-align: center;
+}
+.scroll-item img {
+    display: block;
+    width: 32%;
+}
+

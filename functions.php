@@ -11,11 +11,11 @@ function add_styles() {
     //フォントの読み込み
     wp_enqueue_style(
         'google-fonts',
-        // 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap',
         'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Jaini&display=swap',
         array(),
         null
     );
+
 
     wp_enqueue_style(
         'theme-style',
@@ -31,6 +31,14 @@ function add_styles() {
         'https://unpkg.com/ress/dist/ress.min.css',
         array(),
         '1.0'
+    );
+
+    //swiper cssの読み込み
+    wp_enqueue_style(
+        "swiper-style",
+        "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css",
+        array(),
+        "11"
     );
 
     // main.cssを最後に実行
@@ -58,18 +66,28 @@ function add_scripts()
         'jquery_script',
         'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js',
         array(),
-        '1.0'
+        '1.0',
+        true
     );
 
-    // // main.jsを最後に実行
-    // wp_enqueue_script(
-    //     'main_script',
-    //     get_template_directory_uri() . '/js/main.js',
-    //     array('jquery_script'),
-    //     // 'jquery_script' , 'slick-script' が読み込まれた後に'main_script'を読み込む
-    //     '1.0',
-    //     true
-    // );
+    //sliderライブラリ
+    wp_register_script(
+        "slider",
+        "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js",
+        array(),
+        "1.0",
+        true
+    );
+
+    // main.jsを最後に実行
+    wp_enqueue_script(
+        'main_script',
+        get_template_directory_uri() . '/js/main.js',
+        array('jquery_script',"slider"),
+        // 'jquery_script' , 'slick-script' が読み込まれた後に'main_script'を読み込む
+        '1.0',
+        true
+    );
 
     // 通常scriptタグが<head>に置かれるが、wp_enqueue_scriptの5番目の引数をtrueにすることによって
     // </body>の前に配置される

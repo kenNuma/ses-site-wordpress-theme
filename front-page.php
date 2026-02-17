@@ -57,6 +57,87 @@ get_header();
             </div>
         </div>
     </section>
+    <section class="technology container">
+        <h2 class="section-title">提供サービス</h2>
+        <div class="technology-contents">
+            <div class="front techno-item">
+                <h3>フロントエンド開発</h3>
+                <h4>・業務内容</h4>
+                <p>UI実装、画面設計、改善対応</p>
+                <h4>・対応技術</h4>
+                <div class="swiper scroll">
+                    <ul class="swiper-wrapper">
+                        <li class="scroll-item swiper-slide">
+                            <img src=<?php echo esc_url(get_template_directory_uri() . "/img/Vector_html.svg"); ?> alt="">
+                            <p>HTML</p>
+                        </li>
+                        <li class="scroll-item swiper-slide">
+                            <img src=<?php echo esc_url(get_template_directory_uri() . "/img/Vector_css.svg"); ?> alt="">
+                            <p>CSS</p>
+                        </li>
+                        <li class="scroll-item swiper-slide">
+                            <img src=<?php echo esc_url(get_template_directory_uri() . "/img/Vector_js.svg"); ?> alt="">
+                            <p>JS</p>
+                        </li>
+                        <li class="scroll-item swiper-slide">
+                            <img src=<?php echo esc_url(get_template_directory_uri() . "/img/typescript.svg"); ?> alt="">
+                            <p>TS</p>
+                        </li>
+                        <li class="scroll-item swiper-slide">
+                            <img src=<?php echo esc_url(get_template_directory_uri() . "/img/Vector_react.svg"); ?> alt="">
+                            <p>React</p>
+                        </li>
+                        <li class="scroll-item swiper-slide">
+                            <img src=<?php echo esc_url(get_template_directory_uri() . "/img/Vector_vue.svg"); ?> alt="">
+                            <p>Vue.js</p>
+                        </li>
+                        <li class="scroll-item swiper-slide">
+                            <img src=<?php echo esc_url(get_template_directory_uri() . "/img/nextdotjs.svg"); ?> alt="">
+                            <p>Next.js</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="front techno-item">
+                <h3>バックエンド開発</h3>
+                <h4>・業務内容</h4>
+                <p>API開発、DB設計、業務ロジック</p>
+                <h4>・対応技術</h4>
+                <div class="swiper scroll">
+                    <ul class="swiper-wrapper">
+                        <li class="scroll-item swiper-slide">
+                            <img src=<?php echo esc_url(get_template_directory_uri() . "/img/Vector_php.svg"); ?> alt="">
+                            <p>PHP</p>
+                        </li>
+                        <li class="scroll-item swiper-slide">
+                            <img src=<?php echo esc_url(get_template_directory_uri() . "/img/Vector_ralavel.svg"); ?> alt="">
+                            <p>Laravel</p>
+                        </li>
+                        <li class="scroll-item swiper-slide">
+                            <img src=<?php echo esc_url(get_template_directory_uri() . "/img/Vector_python.svg"); ?> alt="">
+                            <p>Python</p>
+                        </li>
+                        <li class="scroll-item swiper-slide">
+                            <img src=<?php echo esc_url(get_template_directory_uri() . "/img/dotnet.svg"); ?> alt="">
+                            <p>.NET</p>
+                        </li>
+                        <li class="scroll-item swiper-slide">
+                            <img src=<?php echo esc_url(get_template_directory_uri() . "/img/Vector_fastapi.svg"); ?> alt="">
+                            <p>FastAPI</p>
+                        </li>
+                        <li class="scroll-item swiper-slide">
+                            <img src=<?php echo esc_url(get_template_directory_uri() . "/img/Vector_mysql.svg"); ?> alt="">
+                            <p>MySQL</p>
+                        </li>
+                        <li class="scroll-item swiper-slide">
+                            <img src=<?php echo esc_url(get_template_directory_uri() . "/img/mariadb.svg"); ?> alt="">
+                            <p>MariaDB</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 <?php
 get_footer();
