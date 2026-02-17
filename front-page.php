@@ -138,6 +138,34 @@ get_header();
             </div>
         </div>
     </section>
+    <section class="recruit container">
+        <div class="recruit-contents">
+            <div class="recruit-card">
+                <h2>未経験から<br><span>エンジニア</span>へ</h2>
+                <ul class="recruit-list">
+                    <li>・安心の研修</li>
+                    <li>・継続サポート</li>
+                    <li>・キャリアアップ</li>
+                </ul>
+                <a href="#" class="recruit-btn cta-btn">
+                    未経験向け採用を見る<br>
+                    <p>※募集要項・働き方をご確認いただけます</p>
+                </a>
+            </div>
+            <div class="recruit-card">
+                <h2>経験を生かして<br><span>次のステージ</span>へ</h2>
+                <ul class="recruit-list">
+                    <li>・案件選択制</li>
+                    <li>・技術環境</li>
+                    <li>・正当評価</li>
+                </ul>
+                <a href="#" class="recruit-btn cta-btn">
+                    経験者向け採用を見る<br>
+                    <p>※募集要項・働き方をご確認いただけます</p>
+                </a>
+            </div>
+        </div>
+    </section>
 </main>
 <?php
 get_footer();

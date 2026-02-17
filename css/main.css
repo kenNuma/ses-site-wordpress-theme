@@ -336,12 +336,9 @@ body {
 }
 .scroll {
     margin-top: 24px;
-    /* display: flex; */
-    /* gap: 16px; */
     overflow: hidden;
 }
 .scroll-item {
-    /* transform: translateX(-40px); */
     box-sizing: border-box;
     flex-shrink: 0;
     display: flex;
@@ -372,3 +369,55 @@ body {
     width: 32%;
 }
 
+/* - TOP ~ recruit ~ - */
+
+.recruit {
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+.recruit-contents {
+    display: flex;
+    justify-content: space-between;
+}
+.recruit-card {
+    text-align: center;
+    background-color: #fff;
+    padding: 56px 40px;
+    width: 46%;
+    border-radius: 0 0 12px 12px;
+    filter: drop-shadow(0px 8px 24px rgba(0,0,0,0.06));
+    position: relative;
+}
+.recruit-card::before {
+    content: "";
+    width: 100%;
+    background-color: #FFB300;
+    height: 42px;
+    position: absolute;
+    top: -42px;
+    left: 0;
+    border-radius: 16px 16px 0 0 ;
+}
+.recruit-card h2 {
+    font-weight: 400;
+    font-size: 3.5rem;
+    line-height: 1.1;
+}
+.recruit-list {
+    font-weight: 300;
+    text-align: left;
+    padding: 100px 0 100px 12%;
+    font-size: 2.75rem;
+}
+.recruit-card span {
+    color: #FFB300;
+}
+.recruit-btn {
+    display: block;
+    padding: 8px;
+    font-size: 1.75rem;
+    align-items: center;
+}
+.recruit-btn p {
+    font-size: 1.15rem;
+}
