@@ -117,8 +117,13 @@ body {
 .cta-btn:active {
     transform: scale(0.96);    
 }
+.section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+}
 .section-title {
-    font-size: 64px;
+    font-size: 4rem;
     font-weight: 400;
     border-bottom: solid 4px #2E7D32;
     text-align: center;
@@ -149,10 +154,10 @@ body {
     margin-left: 10%;
     padding-top: 15vh;
 }
-.fv-inner a {
+.fv-cta {
     font-size: clamp(16px, 2.5vw, 32px);
     height: clamp(56px, 8vw, 80px);
-    width: clamp(260px, 50vw, 696px);
+    width: clamp(260px, 80vw, 696px);
     margin-top: 80px;
 }
 .catch-copy h1 {
@@ -161,18 +166,13 @@ body {
 }
 .catch-copy p {
     color: #E9F3EC;
-    font-size: clamp(14px, 3.4vw, 49px);
+    font-size: clamp(14px, 3.6vw, 49px);
     font-weight: 300;
-    padding-left: 88px;
+    padding-left: 10%;
     letter-spacing: 0.02em;
 }
 
 /* - TOP ~ overview ~ - */
-.overview {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    text-align: center;
-}
 .overview-contents {
     margin-top: 80px;
     display: flex;
@@ -180,22 +180,22 @@ body {
 }
 .ov-content {
     background-color: #fff;
-    padding: 0 8px;
+    padding: 0 8px 24px 8px;
     width: 49%;
-    height: 411px;
     border-radius: 16px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .ov-content-svg {
     background-color: #D9D9D9;
-    margin: 90px 16px;
     border-radius: 50%;
     width: 40%;
+    aspect-ratio: 1 / 1; 
     position: relative;
 }
 .ov-svg {
-    width: 100px;
+    width: 45%;
     position: absolute;
 }
 .settings { 
@@ -218,7 +218,7 @@ body {
     text-align: left;
     font-family: "Inter";
     padding: 32px 16px;
-    width: 60%;
+    width: 58%;
 }
 .ov-content-text h3 {
     font-size: 2.25rem;
@@ -233,11 +233,6 @@ body {
 }
 
 /* - TOP ~ strengths ~ - */
-.strengths {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    text-align: center;
-}
 .strengths-bg {
     margin-top: 100px;
     background-image: url(../img/strengths-bg.png);
@@ -251,12 +246,11 @@ body {
 }
 .strengths-contents li {
     font-weight: 300;
-    padding: 68px 32px 0 32px;
+    padding: 68px 32px 40px 32px;
     text-align: center;
     background-color: #fff;
     border-radius: 12px;
     width: 32%;
-    height: 440px;
     position: relative;
 }
 .strengths-contents li h3 {
@@ -291,17 +285,12 @@ body {
 
 /* - TOP ~ technology ~ - */
 
-.technology {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    text-align: center;
-}
 .technology-contents {
     margin: 100px 0;
     text-align: left;
 }
 .techno-item h3 {
-    padding-left: calc(80px + 19px); /*擬似要素の分*/
+    padding-left: calc(5% + 19px); /*擬似要素の分*/
     font-size: 3rem;
     color: #111;
     font-weight: 400;
@@ -420,4 +409,149 @@ body {
 }
 .recruit-btn p {
     font-size: 1.15rem;
+}
+
+/* 1024以下で変更 */
+@media (max-width: 1024px) {
+    .site-header {
+        height: 52px;
+    }
+    .fv {
+        margin-top: 52px;
+        height: calc(100vh - 52px);
+    }
+    .section-title {
+        font-size: 3.5rem;
+    }
+    .fv-cta {
+        margin-top: 140px;
+    }
+    .overview-contents {
+        flex-direction: column;
+        gap: 80px;
+    }
+    .ov-content {
+        margin: 0 auto;
+        padding: 40px 8px;
+        width: 90%;
+    }
+    .strengths-contents {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .strengths-contents li {
+        margin: 0 auto;
+        width: 95%;
+    }
+    .responsive-br {
+        display: none;
+    }
+
+    .strengths-contents li h3 {
+
+    }
+    .strengths-contents li p {
+        font-size: 1.5rem;
+        margin-top: 32px;
+        text-align: center;
+    }
+    .recruit-contents {
+        flex-direction: column;
+        gap: 80px;
+    }
+    .recruit-card {
+        margin: 0 auto;
+        width: 95%;
+    }
+
+    .recruit-list {
+        padding: 52px 0 60px 24%;
+        font-size: 3rem;
+    }
+    .recruit-list li {
+        margin: 0 auto;
+    }
+}
+
+/* 768以下で変更 */
+@media (max-width: 768px) {
+    .section {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    .site-header {
+        height: 40px;
+    }
+    .section-title {
+        font-size: 2.5rem;
+    }
+    .fv{
+        background-position: center 25%;
+        margin-top: 40px;
+        min-height: calc(100svh - 40px); /* ヘッダー分引く。vhよりsvhが安定 */
+        padding: 12svh 5% 8svh;         /* 上下余白を画面比で */
+    }
+    .fv-inner{
+        height: 100%;                 /* ←これ大事（これがないと下に押せない） */
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        width: 100%;
+        padding-top: 0;               /* ここで押さない */
+    }
+    .fv-cta{
+        margin-top: auto;                /* ←固定pxをやめる */
+        width: min(90%, 520px);
+        margin-inline: auto;
+    }
+    .catch-copy p {
+        margin-top: 14px;
+        letter-spacing: 0.03em;
+        line-height: 1.4;
+    }
+    .ov-content {
+        padding: 4% 8px;
+    }
+    .ov-content-text h3 {
+        font-size: 1.5rem;
+    }
+    .ov-content-text p {
+        padding-top: 20px;
+        font-size: 1rem;
+    }
+    .technology-contents {
+        margin: 100px 2.5%;
+        text-align: left;
+    }
+    .techno-item h3 {
+        padding-left: calc(4% + 12px);
+        font-size: 2rem;
+    }
+    .techno-item h3::before {
+        width: 12px;
+    }
+    .techno-item h4 {
+        font-size: 1.75rem;
+    }
+    .techno-item > p {
+        margin: 8px 0 0 40px;
+        font-size: 1.375rem;
+    }
+    .swiper-slide {
+        width: 210px;
+    }
+    .scroll-item p {
+        font-size: 2rem;
+    }
+
+    .recruit-card h2{
+        font-size: 2.25rem
+    }
+    .recruit-list {
+        padding: 52px 0 60px 24%;
+        font-size: 2rem;
+    }
+    /* .recruit-list li {
+        margin: 0 auto;
+    } */
 }
