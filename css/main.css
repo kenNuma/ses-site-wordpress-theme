@@ -519,39 +519,53 @@ body {
         padding-top: 20px;
         font-size: 1rem;
     }
+    .strengths-contents li p {
+        font-size: 1.375rem;
+    }
     .technology-contents {
         margin: 100px 2.5%;
         text-align: left;
     }
     .techno-item h3 {
         padding-left: calc(4% + 12px);
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
     .techno-item h3::before {
         width: 12px;
     }
     .techno-item h4 {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
     .techno-item > p {
         margin: 8px 0 0 40px;
-        font-size: 1.375rem;
+        font-size: 1.25rem;
     }
     .swiper-slide {
-        width: 210px;
+        width: 190px;
     }
     .scroll-item p {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
-
+    .recruit {
+        margin-top: 100px;
+        margin-bottom: 60px;
+    }
+    .recruit-card {
+        padding: 32px 24px;
+    }
     .recruit-card h2{
         font-size: 2.25rem
     }
     .recruit-list {
-        padding: 52px 0 60px 24%;
-        font-size: 2rem;
+        padding: 40px 0;
+        text-align: center;
+        font-size: 1.75rem;
     }
-    /* .recruit-list li {
-        margin: 0 auto;
-    } */
+    .recruit-btn {
+        padding: 2px;
+        font-size: 1.375rem;
+    }
+    .recruit-btn p {
+        font-size: 0.85rem;
+    }
 }
