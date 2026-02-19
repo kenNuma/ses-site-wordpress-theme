@@ -40,7 +40,7 @@ WordPress管理画面からテーマを有効化してください。
 Figmaで作成したデザインカンプです。  
 本カンプを基にUI実装を行っています。
 
-![Design](designs.png)
+![Design](img/designs.png)
 
 ---
 
