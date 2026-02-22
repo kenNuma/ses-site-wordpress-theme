@@ -17,6 +17,9 @@ body {
     font-size: 16px;
     background-color: #FAF7F2;
 }
+main {
+    margin-top: 72px;
+}
 
 /* - header - */
 .site-header {
@@ -136,7 +139,6 @@ body {
 .fv {
     background-image: url(../img/fv.png);
     background-size: cover;
-    margin-top: 72px;
     height: calc(100vh - 72px);
     display: flex;
     align-items: flex-start;
@@ -536,11 +538,252 @@ body {
     color:#555;
     border-top:1px solid rgba(0,0,0,0.08);
 }
+/* ///////////////////  ここから先はお問合せ・エントリーフォーム  /////////////////  */
+
+/* Contact Form 7 - Contact page */
+/* ===== ヒーロー部分 ===== */
+
+.contact-hero {
+    background: linear-gradient(to bottom, #fff 0%, #ededed 100%);
+    padding: 80px 20px 32px;
+    text-align: center;
+}
+
+.contact-hero h1 {
+    font-weight: 400;
+    font-size: 3rem;
+    margin: 0 0 14px;
+}
+
+.contact-hero-lead {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: rgba(0,0,0,0.75);
+}
+
+/* ===== 本文エリア ===== */
+
+.contact-body {
+    padding: 80px 20px;
+}
+
+.contact-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    max-width: 720px;
+    margin: 0 auto 40px;
+    
+}
+
+.contact-form {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 32px 24px;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 8px;
+}
+
+.contact-form p {
+    margin: 0 0 1 8px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.contact-form .req {
+    color: #2e7d32;
+    font-weight: 600;
+    margin-left: 6px;
+    font-size: 0.9em;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid rgba(0,0,0,0.25);
+    border-radius: 6px;
+    background: #fff;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+
+.contact-form select {
+    height: 44px;
+}
+
+/* 送信ボタン（大きいオレンジ） */
+.contact-form input[type="submit"]{
+    margin-top: 24px;
+    width: min(720px, 100%);
+    padding: 18px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #f2a900;
+    color: #fff;
+    font-weight: 800;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.10);
+}
+
+/* 注意書き */
+.contact-form .contact-note{
+    display: block;
+    margin-top: -12px;
+    font-size: 12.5px;
+    color: rgba(0,0,0,0.45);
+}
+
+.contact-form input[type="submit"]:hover {
+    opacity: 0.9;
+}
+
+/* CF7 バリデーション */
+.contact-form .wpcf7-not-valid-tip {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.contact-form .wpcf7-response-output {
+    margin: 18px 0 0;
+}
+
+/* =========================
+　Entry Form Layout
+========================= */
+
+.entry-form{
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 30px 28px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* 行 */
+.entry-row{
+    margin: 0 0 18px;
+}
+
+/* ラベル */
+.entry-form label{
+    display:block;
+    font-weight:600;
+    margin-bottom:8px;
+}
+
+/* 必須表示 */
+.entry-form .req{
+    color:#2e7d32;
+    font-weight:700;
+    margin-left:6px;
+    font-size:.9em;
+}
+
+/* 入力欄共通 */
+.entry-form input[type="text"],
+.entry-form input[type="email"],
+.entry-form input[type="tel"],
+.entry-form select,
+.entry-form textarea{
+    width:100%;
+    box-sizing:border-box;
+    padding:14px 14px;
+    border:1px solid rgba(0,0,0,0.25);
+    border-radius:6px;
+    font-size:16px;
+    background:#fff;
+}
+
+/* select高さ統一 */
+.entry-form select{
+    height:48px;
+}
+
+/* textarea */
+.entry-form textarea{
+    min-height:180px;
+    resize:vertical;
+}
+
+/* =========================
+    Submit Area
+========================= */
+
+.entry-submit{
+    margin-top:30px;
+}
+
+/* ボタン */
+.entry-form input[type="submit"]{
+    display:block;
+    width:100%;
+    max-width:720px;
+    margin:0 auto;
+    padding:20px;
+    border:none;
+    border-radius:8px;
+    background:#f2a900;
+    color:#fff;
+    font-weight:800;
+    font-size:18px;
+    cursor:pointer;
+    box-shadow:0 6px 18px rgba(0,0,0,.12);
+    transition:.25s;
+}
+
+/* hover */
+.entry-form input[type="submit"]:hover{
+    transform:translateY(-1px);
+    box-shadow:0 10px 22px rgba(0,0,0,.18);
+}
+
+/* 注意書き */
+.entry-note{
+    display:block;
+    max-width:720px;
+    font-size:12.5px;
+    color:rgba(0,0,0,.45);
+}
+
+/* =========================
+    Validation
+========================= */
+
+.entry-form .wpcf7-not-valid-tip{
+    margin-top:6px;
+    font-size:13px;
+}
+
+.entry-form .wpcf7-response-output{
+    margin-top:18px;
+}
 
 /* 1024以下で変更 */
 @media (max-width: 1024px) {
     .site-header {
         height: 52px;
+    }
+    main {
+        margin-top: 52px;
     }
     .global-nav a {
         font-size: 0.875rem;
@@ -550,7 +793,6 @@ body {
         padding: 0;
     }
     .fv {
-        margin-top: 52px;
         height: calc(100vh - 52px);
     }
     .section-title {
@@ -605,6 +847,9 @@ body {
 
 /* 768以下で変更 */
 @media (max-width: 768px) {
+    main{
+        margin-top: 40px;
+    }
     .section {
         margin-top: 60px;
         margin-bottom: 60px;
@@ -620,7 +865,6 @@ body {
     }
     .fv{
         background-position: center 25%;
-        margin-top: 40px;
         min-height: calc(100svh - 40px); /* ヘッダー分引く。vhよりsvhが安定 */
         padding: 12svh 5% 8svh;         /* 上下余白を画面比で */
     }
