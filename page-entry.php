@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section class="contact-hero">
+<section class="hero">
     <div class="contact-hero-inner">
         <h1>エントリー</h1>
         <p class="contact-hero-lead">

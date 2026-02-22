@@ -7,7 +7,7 @@ ul {
     list-style: none;
 }
 li {
-    list-style: none;
+    /* list-style: none; */
 }
 img {
     width: 100%;
@@ -396,7 +396,7 @@ main {
     font-size: 3.5rem;
     line-height: 1.1;
 }
-.recruit-list {
+.top .recruit-list {
     font-weight: 300;
     text-align: left;
     padding: 100px 0 100px 12%;
@@ -543,13 +543,13 @@ main {
 /* Contact Form 7 - Contact page */
 /* ===== ヒーロー部分 ===== */
 
-.contact-hero {
+.hero {
     background: linear-gradient(to bottom, #fff 0%, #ededed 100%);
-    padding: 80px 20px 32px;
+    padding: 80px 20px 16px;
     text-align: center;
 }
 
-.contact-hero h1 {
+.hero h1 {
     font-weight: 400;
     font-size: 3rem;
     margin: 0 0 14px;
@@ -750,13 +750,11 @@ main {
     transition:.25s;
 }
 
-/* hover */
 .entry-form input[type="submit"]:hover{
     transform:translateY(-1px);
     box-shadow:0 10px 22px rgba(0,0,0,.18);
 }
 
-/* 注意書き */
 .entry-note{
     display:block;
     max-width:720px;
@@ -767,15 +765,168 @@ main {
 /* =========================
     Validation
 ========================= */
-
 .entry-form .wpcf7-not-valid-tip{
     margin-top:6px;
     font-size:13px;
 }
-
 .entry-form .wpcf7-response-output{
     margin-top:18px;
 }
+
+/* =========================
+    採用導線Page
+========================= */
+.recruit-catch {
+    padding: 80px;
+    text-align: center;
+}
+.recruit-catch h2{
+    font-weight: 400;
+    font-size: 2rem;
+}
+.recruit-catch h3{
+        font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.recruit-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:64px;
+
+    width: min(720px, 90vw);
+    margin: 0 auto 60px;
+
+    padding: 36px 18px;
+    border: 1px solid #bdbdbd;
+    background:#fff;
+    text-decoration:none;
+    color:#111;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.recruit-row__text{
+    font-size: 1.15rem;
+    line-height: 1.4;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.recruit-row__btn{
+    flex-shrink:0;
+    white-space:nowrap;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+
+    padding: 6px 10px;
+    border-radius: 4px;
+    background: #FFB300;
+    color:#fff;
+}
+
+.recruit-row:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+/* =========================
+    採用詳細Page
+========================= */
+.job-intro{
+    text-align:center;
+    padding: 60px 20px;
+}
+.job-title{
+    font-size: clamp(26px, 4vw, 40px);
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+.job-lead{
+    font-size: clamp(15px, 2vw, 18px);
+    line-height: 1.9;
+    color:#333;
+    margin-bottom: 50px;
+}
+/* グレーボックス */
+.job-box{
+    max-width: 600px;
+    margin: 0 auto;
+    background:#fff;
+    border-radius:14px;
+    padding: 28px 34px;
+    text-align:left;
+}
+.job-box ul{
+    list-style: disc;
+}
+/* 見出し */
+.job-box h2{
+    font-size:18px;
+    margin-bottom:14px;
+}
+/* リスト */
+.job-box ul{
+    margin:0;
+    padding-left:18px;
+    line-height:1.9;
+    color:#444;
+}
+.job-spec__inner{
+    width: min(920px, 92vw);
+    margin: 60px auto;
+    background:#fff;
+    border:1px solid #dcdcdc;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 24px rgba(0,0,0,.05);
+}
+/* 見出し */
+.job-spec__inner h2{
+    margin:0;
+    padding:20px 24px;
+    font-size:24px;
+    border-bottom:1px solid #dcdcdc;
+}
+/* ===== 行 ===== */
+.spec__row{
+    display:grid;
+    grid-template-columns: 240px 1fr;
+    border-bottom:1px solid #dcdcdc;
+}
+.spec__row:hover{
+    background:#fafafa;
+}
+.spec__row:last-child{
+    border-bottom:none;
+}
+/* 左（項目名） */
+.spec dt{
+    background:#f3f3f3;
+    padding:18px 20px;
+    font-weight:600;
+}
+/* 右（内容） */
+.spec dd{
+    margin:0;
+    padding:18px 20px;
+}
+.entry-area p {
+    text-align: center;
+    padding: 12px 0;
+    font-size: 0.75rem;
+    color: #555;
+}
+.entry-btn{
+    width: min(520px, 90%);
+    padding: 18px 24px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-inline:auto;
+    margin-bottom: 60px;
+}
+
 
 /* 1024以下で変更 */
 @media (max-width: 1024px) {
@@ -836,11 +987,11 @@ main {
         width: 95%;
     }
 
-    .recruit-list {
+    .top .recruit-list {
         padding: 52px 0 60px 24%;
         font-size: 3rem;
     }
-    .recruit-list li {
+    .top .recruit-list li {
         margin: 0 auto;
     }
 }
@@ -933,7 +1084,7 @@ main {
     .recruit-card h2{
         font-size: 2.25rem
     }
-    .recruit-list {
+    .top .recruit-list {
         padding: 40px 0;
         text-align: center;
         font-size: 1.75rem;
@@ -958,5 +1109,14 @@ main {
     }
     .more-btn {
         margin-left: 0;
+    }
+
+    .spec__row{
+        grid-template-columns: 1fr;
+    }
+
+    .spec dt{
+        border-bottom:1px solid #dcdcdc;
+        background:#f7f7f7;
     }
 }

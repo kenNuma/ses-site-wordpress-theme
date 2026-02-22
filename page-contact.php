@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section class="contact-hero">
+<section class="hero">
     <div class="contact-hero-inner">
         <h1>お問い合わせ</h1>
         <p class="contact-hero-lead">
@@ -10,7 +10,6 @@
         </p>
     </div>
 </section>
-
 <section class="contact-body">
     <p class="contact-info">
         新規開発、ご提案、ご相談など、お気軽にご連絡ください。<br>

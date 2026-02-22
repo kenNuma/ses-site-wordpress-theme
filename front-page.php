@@ -1,7 +1,7 @@
 <?php
 get_header();
 ?>
-<main>
+<main class="top">
     <section class="fv">
         <div class="fv-inner">
             <div class="catch-copy shadow">
