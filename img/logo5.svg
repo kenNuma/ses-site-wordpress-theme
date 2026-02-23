@@ -1,0 +1,4 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="60,20 95,40 95,80 60,100 25,80 25,40" fill="#333"/>
+  <polyline points="45,45 75,60 45,75" stroke="#fff" stroke-width="6" fill="none"/>
+</svg>

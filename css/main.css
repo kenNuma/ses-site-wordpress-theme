@@ -1139,65 +1139,476 @@ main {
 
 /* ===== 代表者メッセージ ===== */
 .ceo{
-  padding: 80px 0;
-  background: #FAF7F2;
+    padding: 80px 0;
+    background: #FAF7F2;
 }
 
 .ceo__inner{
-  width: min(1100px, 92vw);
-  margin: 0 auto;
+    width: min(1100px, 92vw);
+    margin: 0 auto;
 }
 
 /* 2カラム */
 .ceo__grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 
 /* 左カード */
 .ceo__card{
-  background: #fff;
-  padding: 24px 44px;
-  box-shadow: 0 10px 28px rgba(0,0,0,.06);
+    background: #fff;
+    padding: 24px 44px;
+    box-shadow: 0 10px 28px rgba(0,0,0,.06);
 }
 
 .ceo__title{
-  font-size: clamp(30px, 4vw, 48px);
-  font-weight: 800;
-  margin: 0 0 22px;
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 800;
+    margin: 0 0 22px;
 }
 
 .ceo__card p{
-  margin: 0 0 18px;
-  color: #222;
-  font-size: 16px;
+    margin: 0 0 18px;
+    color: #222;
+    font-size: 16px;
 }
 
 .ceo__sign{
-  margin-top: 24px;
-  font-weight: 700;
+    margin-top: 24px;
+    font-weight: 700;
 }
 
 /* 右画像 */
 .ceo__photo{
-  margin: 0;
+    margin: 0;
 }
 
 .ceo__photo img{
-  width: 120%;
-  height: auto;
-  display: block;
-  border-radius: 14px;
-  box-shadow: 0 12px 34px rgba(0,0,0,.10);
+    width: 120%;
+    height: auto;
+    display: block;
+    border-radius: 14px;
+    box-shadow: 0 12px 34px rgba(0,0,0,.10);
 }
 
-/* ===== SP ===== */
+/* =========================
+   business-compare
+========================= */
+/* ---------- hero ---------- */
+.business-hero{
+    padding: clamp(36px, 5vw, 64px) 0 clamp(28px, 4vw, 48px);
+    text-align: center;
+}
+
+.business-lead{
+    font-size: clamp(16px, 2.2vw, 20px);
+    line-height: 1.9;
+    color: #222;
+    letter-spacing: 0.02em;
+}
+/* ---------- hero 消さない---------- */
+
+.business-compare{
+    padding: clamp(36px, 6vw, 72px) 0;
+}
+
+.compare-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 16px 30px rgba(0,0,0,0.08);
+}
+
+/* 真ん中の仕切り線 */
+.compare-card + .compare-card{
+    border-left: 1px solid rgba(0,0,0,0.10);
+}
+
+.compare-card{
+    padding: clamp(26px, 3.5vw, 44px);
+    display: flex;
+    flex-direction: column;
+    /* 下のpillを“下に落ち着かせる”ため */
+    min-height: 100%;
+}
+
+.compare-head{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px; /* 縦メリハリ */
+}
+
+.compare-icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;     /* カンプ寄せ：丸っぽい */
+    background: #2e7d32;
+    opacity: 0.95;
+    flex: 0 0 auto;
+}
+
+.compare-title{
+    font-size: clamp(18px, 2vw, 26px);
+    font-weight: 700;
+    margin: 0;
+    color: #111;
+    letter-spacing: 0.01em;
+}
+
+.compare-desc{
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.9;
+    letter-spacing: 0.03em;
+}
+.compare-info{
+    font-size: 0.85rem;
+    margin: 0 0 24px 32px;
+    color: #333;
+}
+
+/* dl を表っぽく */
+.compare-dl{
+    margin: 0;
+}
+
+.compare-row{
+    display: grid;
+    grid-template-columns: 11em 1fr;
+    gap: 12px;
+    padding: 36px 0; /* ←ここが“縦を使う”本丸 */
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.compare-row:last-child{
+    border-bottom: none;
+}
+
+.compare-row dt{
+    font-weight: 700;
+    color: #111;
+}
+
+.compare-row dd{
+    margin: 0;
+    color: #111;
+    line-height: 1.8;
+}
+.compare-row dt span{
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+    color: #81C784;
+}
+
+/* 緑のチェック枠（背景＋薄影） */
+.compare-checkbox{
+    background: #eef6ee;
+    border-radius: 14px;
+    padding: 22px 22px;
+    box-shadow: 0 10px 18px rgba(0,0,0,0.05);
+    margin: 28px 0 26px; /* 縦余白UP */
+}
+
+.compare-check{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.compare-check li{
+    position: relative;
+    padding-left: 30px;
+    margin: 12px 0;
+    font-weight: 700;
+    color: #111;
+}
+
+.compare-check li::before{
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(46,125,50,0.18);
+    color: #2e7d32;
+    font-size: 12px;
+}
+
+/* 下のpill（ボタン風） */
+.compare-tags{
+    /* display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap; */
+
+    margin-top: auto;       /* ←これでカード下に“固定”されやすい */
+    padding-top: 10px;
+    padding-bottom: 6px;
+    position:relative;
+    height: clamp(140px, 14vw, 190px)
+}
+
+.pill{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #79bf86;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    box-shadow: 0 12px 18px rgba(121,191,134,0.25);
+    position: absolute;
+    min-width: 180px;                 /* 楕円っぽさ強める */
+    padding: 14px 22px;
+    border-radius: 999px;
+    text-align: center;
+}
+/* ---------- 左の配置 ---------- */
+.tags-left .pill:nth-child(1){ /* 柔軟な体制：上中央 */
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+.tags-left .pill:nth-child(2){ /* チーム一体：左下 */
+    left: -4%;
+    bottom: 0;
+}
+.tags-left .pill:nth-child(3){ /* 長期支援：右下 */
+    right: -4%;
+    bottom: 0;
+}
+/* ---------- 右の配置 ---------- */
+.tags-right .pill:nth-child(1){ /* 一括対応：上中央 */
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+.tags-right .pill:nth-child(2){ /* 納品責任：左下 */
+    left: 6%;
+    bottom: 0;
+}
+.tags-right .pill:nth-child(3){ /* 進行管理：右下 */
+    right: 6%;
+    bottom: 0;
+}
+
+/* ---------- responsive ---------- */
 @media (max-width: 900px){
-
+    .compare-grid{
+        grid-template-columns: 1fr;
+    }
+    .compare-card + .compare-card{
+        border-left: none;
+        border-top: 1px solid rgba(0,0,0,0.10);
+    }
+    .compare-row{
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 16px 0;
+    }
+}
+/* SPは崩れやすいから、flexに戻す（安全策） */
+@media (max-width: 600px){
+    .compare-tags{
+        position: static;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 18px;
+    }
+    .compare-tags .pill{
+        position: static;
+        transform: none;
+        min-width: 140px;
+        padding: 11px 18px;
+    }
+    .tags-left .pill:nth-child(1){
+        transform: none;
+    }
+    .tags-right .pill:nth-child(1){
+        transform: none;
+    }
 }
 
-/* 1024以下で変更 */
+/* =========================
+business-detail (SYNC HEIGHT + VAR WIDTH)
+========================= */
+.business-detail{
+    padding: clamp(52px, 7vw, 96px) 0;
+}
+
+/* 左右同じ“行”に載せて、同じ高さにする */
+.business-detail .detail-grid{
+    display: grid;
+    grid-template-columns: 1fr minmax(420px, 640px);
+    align-items: stretch; /* ←左右同じ高さに伸ばす */
+}
+
+/* 重要：右側が中身の自然高さで“押し広げる”のを防ぐ */
+.business-detail .detail-text,
+.business-detail .detail-images{
+    min-height: 0;
+}
+
+.business-detail .detail-text{
+    padding: 24px 40px;
+}
+
+/* 反転（画像左） */
+.business-detail.is-reverse .detail-grid{
+    grid-template-columns: minmax(420px, 640px) 1fr;
+}
+.business-detail.is-reverse .detail-text{ order: 2; }
+.business-detail.is-reverse .detail-images{ order: 1; }
+
+/* ---------- text ---------- */
+.business-detail .detail-title{
+    font-size: clamp(18px, 2vw, 24px);
+    font-weight: 700;
+    color: #222;
+    margin: 0 0 14px;
+    letter-spacing: 0.01em;
+}
+
+.business-detail .detail-lead{
+    font-size: 13px;
+    line-height: 2.0;
+    color: #333;
+    margin: 0 0 18px;
+    letter-spacing: 0.02em;
+}
+
+.business-detail .detail-subtitle{
+    font-size: 14px;
+    font-weight: 700;
+    color: #222;
+    margin: 22px 0 10px;
+    letter-spacing: 0.02em;
+}
+.business-detail .border-title{
+    border: #555 1px solid;
+    display: inline;
+}
+
+.business-detail .detail-bullets,
+.business-detail .detail-steps{
+    font-size: 13px;
+    line-height: 2.0;
+    color: #222;
+    margin: 0 0 14px;
+    padding-left: 1.25em;
+    letter-spacing: 0.02em;
+}
+.business-detail ul{
+    list-style: disc;
+}
+
+.business-detail .detail-bullets li,
+.business-detail .detail-steps li{
+    margin: 6px 0;
+}
+
+/* ---------- images ---------- */
+/* 右カラムの高さを “左と同じ高さ(=100%)” に固定して、その中を3分割 */
+.business-detail .detail-images{
+    height: 100%;
+    min-height: 0;
+    display: grid;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr; /* 中が大きめ */
+    gap: 16px;
+}
+.business-detail.is-reverse .detail-images{
+    height: 100%;
+    min-height: 0;
+    display: grid;
+    grid-template-rows: 0.3fr 0.3fr 0.3fr 0.3fr; /* 中が大きめ */
+    gap: 16px;
+}
+
+/* 画像は「各行の高さ100%」にして、はみ出しはトリミング */
+.business-detail .detail-images img{
+    height: 100%;
+    min-height: 0;
+    display: block;
+    border-radius: 12px;
+    /* 右端揃え（横幅変えても右が揃う） */
+    justify-self: end;
+    /* トリミングで枠に収める */
+    object-fit: cover;
+    width: 100%;
+}
+
+/* 横幅だけ個別に変える（右端揃えのまま左側がズレる） */
+.business-detail .detail-images img:nth-child(1){ width: 100%; }
+.business-detail .detail-images img:nth-child(2){ width: 60%; }
+.business-detail .detail-images img:nth-child(3){ width: 100%; }
+/* 下の方 */
+.business-detail.is-reverse .detail-images img:nth-child(1){ width: 100%; }
+.business-detail.is-reverse .detail-images img:nth-child(2){ width: 70%; justify-self: left;}
+.business-detail.is-reverse .detail-images img:nth-child(3){ width: 100%; }
+.business-detail.is-reverse .detail-images img:nth-child(4){ width: 60%; }
+
+/* ---------- clients ---------- */
+.business-clients{
+    padding: clamp(50px, 7vw, 90px) 0 clamp(40px, 6vw, 70px);
+    text-align: center;
+}
+
+.clients-title{
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.clients-sub{
+    font-size: 0.875rem;
+    color: #333;
+    margin-bottom: 28px;
+}
+
+.clients-logos{
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 80px;
+    display: flex;
+    justify-content: space-around;
+    gap: 88px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.clients-logos li{
+    text-align: center;
+}
+.clients-logos img{
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+.clients-cta{
+    margin-top: 24px;
+}
+.client-cta-btn{
+    padding: 24px 0;
+    width: clamp(340px, 45vw, 600px);
+    display: inline-block;
+    text-align: center;
+}
+
+
+
+/* ////////// 1024以下で変更 /////////// */
 @media (max-width: 1024px) {
     .site-header {
         height: 52px;
@@ -1273,9 +1684,39 @@ main {
     .ceo__card{
         padding: 28px 22px;
     }
+
+    .business-detail .detail-grid{
+        grid-template-columns: 1fr;
+        align-items: initial;
+    }
+    .business-detail.is-reverse .detail-grid{
+        grid-template-columns: 1fr;
+        align-items: initial;
+    }
+    
+    .business-detail .detail-images{
+        height: auto;
+        grid-template-rows: none;
+        grid-auto-rows: auto;
+    }
+    .business-detail.is-reverse .detail-images{
+        height: auto;
+        grid-template-rows: none;
+        grid-auto-rows: auto;
+    }
+    .business-detail .detail-images img{
+        height: auto;
+        width: 100%;
+        justify-self: stretch;
+    }
+
+    .business-detail.is-reverse .detail-text,
+    .business-detail.is-reverse .detail-images{
+        order: initial;
+    }
 }
 
-/* 768以下で変更 */
+/* /////// 768以下で変更 ///////// */
 @media (max-width: 768px) {
     main{
         margin-top: 40px;
@@ -1295,19 +1736,19 @@ main {
     }
     .fv{
         background-position: center 25%;
-        min-height: calc(100svh - 40px); /* ヘッダー分引く。vhよりsvhが安定 */
-        padding: 12svh 5% 8svh;         /* 上下余白を画面比で */
+        min-height: calc(100svh - 40px);
+        padding: 12svh 5% 8svh;
     }
     .fv-inner{
-        height: 100%;                 /* ←これ大事（これがないと下に押せない） */
+        height: 100%;
         display: flex;
         flex-direction: column;
         margin-left: 0;
         width: 100%;
-        padding-top: 0;               /* ここで押さない */
+        padding-top: 0;
     }
     .fv-cta{
-        margin-top: auto;                /* ←固定pxをやめる */
+        margin-top: auto;
         width: min(90%, 520px);
         margin-inline: auto;
     }
@@ -1418,5 +1859,25 @@ main {
         grid-template-columns: 1fr;
     }
     .news-single-next { text-align: left; }
+
+        .compare-grid{
+        grid-template-columns: 1fr;
+    }
+    .compare-card + .compare-card{
+        border-left: none;
+        border-top: 1px solid #cfc7bd;
+    }
+
+    .business .tag{
+        min-width: 96px;
+        padding: 10px 14px;
+    }
+
+    .clients-logos{
+        gap: 40px;
+    }
+    .clients-logos img{
+        height: 60px;
+    }
 
 }
