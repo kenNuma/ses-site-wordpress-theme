@@ -23,5 +23,9 @@
         <?php endwhile; endif; ?>
     </div>
 </section>
-
+<script>
+    document.addEventListener('wpcf7mailsent', function() {
+        location = '/contact/contact-complate/';
+    }, false);
+</script>
 <?php get_footer(); ?>

@@ -73,7 +73,6 @@ main {
 .global-nav .current_page_item > a::after {
     opacity: 1;
     bottom: 4px;
-    height: 3px;          /* 太くしたいなら */
     transition: none;
 }
 
@@ -1378,11 +1377,11 @@ main {
     transform: translateX(-50%);
 }
 .tags-left .pill:nth-child(2){ /* チーム一体：左下 */
-    left: -4%;
+    left: 6%;
     bottom: 0;
 }
 .tags-left .pill:nth-child(3){ /* 長期支援：右下 */
-    right: -4%;
+    right: 6%;
     bottom: 0;
 }
 /* ---------- 右の配置 ---------- */
@@ -1606,10 +1605,114 @@ business-detail (SYNC HEIGHT + VAR WIDTH)
     text-align: center;
 }
 
+/* ---------- complate関連 ---------- */
+.thanks-page{
+  padding: clamp(52px, 7vw, 96px) 0;
+}
+
+.thanks-hero .container{
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.thanks-card{
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 18px;
+  padding: clamp(24px, 4vw, 44px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.thanks-badge{
+  display: inline-block;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(46, 125, 32, 0.08);
+  color: #2E7D32;
+  margin-bottom: 14px;
+}
+
+.thanks-title{
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  line-height: 1.25;
+  margin: 0 0 14px;
+}
+
+.thanks-lead{
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0 0 22px;
+  color: rgba(0,0,0,0.78);
+}
+
+.thanks-info{
+  margin: 0 0 26px;
+  padding: 0;
+}
+
+.thanks-row{
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 12px;
+  padding: 14px 0;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.thanks-row:last-child{
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.thanks-row dt{
+  font-weight: 600;
+  color: rgba(0,0,0,0.82);
+}
+
+.thanks-row dd{
+  margin: 0;
+  color: rgba(0,0,0,0.72);
+}
+
+.thanks-actions{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 18px;
+}
+
+.thanks-btn{
+  padding: 14px 18px;
+  min-width: 220px;
+}
+
+.thanks-link{
+  color: #2E7D32;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 640px){
+  .thanks-row{
+    grid-template-columns: 1fr;
+  }
+  .thanks-btn{
+    width: 100%;
+    min-width: unset;
+  }
+}
+
 
 
 /* ////////// 1024以下で変更 /////////// */
 @media (max-width: 1024px) {
+    /* headerのホバー時アニメーション調整 */
+    .global-nav li:not(.current_page_item) > a:hover::after {
+        bottom: -2px;
+    }
+    .global-nav .current_page_item > a::after {
+        bottom: -2px;
+    }
     .site-header {
         height: 52px;
     }
